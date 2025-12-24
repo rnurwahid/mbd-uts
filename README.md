@@ -30,9 +30,3 @@ mbd-uts-ramadan
 ## Cara Menjalankan
 ```bash
 docker compose up -d
-
-User Database
-User	Role
-backend_dev	CRUD semua table
-bi_dev	SELECT saja
-data_engineer	CREATE, MODIFY, DROP object
