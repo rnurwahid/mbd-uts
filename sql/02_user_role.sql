@@ -1,0 +1,19 @@
+-- Membuat user
+CREATE USER backend_dev WITH PASSWORD 'backend123';
+CREATE USER bi_dev WITH PASSWORD 'bi123';
+CREATE USER data_engineer WITH PASSWORD 'engineer123';
+
+-- Hak akses backend_dev (CRUD)
+GRANT USAGE ON SCHEMA SALAM TO backend_dev;
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON ALL TABLES IN SCHEMA SALAM TO backend_dev;
+
+-- Hak akses bi_dev (READ ONLY)
+GRANT USAGE ON SCHEMA SALAM TO bi_dev;
+GRANT SELECT
+ON ALL TABLES IN SCHEMA SALAM TO bi_dev;
+
+-- Hak akses data_engineer (FULL CONTROL)
+GRANT ALL PRIVILEGES ON SCHEMA SALAM TO data_engineer;
+GRANT ALL PRIVILEGES
+ON ALL TABLES IN SCHEMA SALAM TO data_engineer;
